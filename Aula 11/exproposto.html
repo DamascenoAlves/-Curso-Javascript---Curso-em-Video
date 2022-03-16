@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theuzin Apelaum</title>
+</head>
+<body>
+    <h1>Sistema de Nacionalidade</h1>
+    Digite onde você nasceu: <input type="text" name = "txtpais" id = "txtpais">
+    <input type="button" value="Comparar" onclick="nacionalidade()">
+    <div id="msg"></div>
+    <script>
+        function nacionalidade(){
+            var pais = window.document.querySelector('input#txtpais')
+            
+            var msg  = window.document.querySelector('div#msg')
+            if(pais.value=='Brasil'){
+                msg.innerHTML = '<p>Você é brasileiro</p>'
+            }else{
+                msg.innerHTML = '<p>Você é estrangeiro</p>'
+            }
+        }
+    </script>
+</body>
+</html>
